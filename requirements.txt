@@ -7,6 +7,5 @@ pandas
 openpyxl
 pytesseract
 numpy
-opencv-python
-timm
 opencv-python-headless
+timm

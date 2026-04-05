@@ -16,6 +16,12 @@ logger = logging.getLogger(__name__)
 # --- PAGE CONFIG ---
 st.set_page_config(page_title="Industrial Table Extraction Pro", layout="wide", page_icon="📊")
 
+# --- DEPLOYMENT CHECK (Tesseract Path) ---
+import shutil
+if not shutil.which("tesseract"):
+    # Fallback to common Linux path on Streamlit Cloud
+    pytesseract.pytesseract.tesseract_cmd = "/usr/bin/tesseract"
+
 # --- CUSTOM CSS ---
 st.markdown("""
     <style>
