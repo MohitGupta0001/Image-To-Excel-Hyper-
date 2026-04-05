@@ -1,0 +1,42 @@
+[project]
+name = "pytorch-table-extractor"
+version = "0.1.0"
+description = "A powerful AI-driven table extraction tool from image-to-excel using Table Transformers and OCR."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "streamlit>=1.30.0",
+    "torch>=2.2.0",
+    "torchvision>=0.17.0",
+    "transformers>=4.40.0",
+    "pillow>=10.2.0",
+    "pandas>=2.2.0",
+    "openpyxl>=3.1.2",
+    "pytesseract>=0.3.10",
+    "numpy>=1.26.0",
+    "opencv-python>=4.9.0",
+    "timm>=1.0.0",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "UP", "B", "C4", "SIM", "TCH"]
+ignore = ["E402", "B904"]
+
+[tool.ruff.lint.isort]
+combine-as-imports = true
+force-wrap-aliases = true
+
+[tool.mypy]
+python_version = "3.12"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+check_untyped_defs = true
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
