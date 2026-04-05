@@ -9,3 +9,4 @@ pytesseract
 numpy
 opencv-python
 timm
+opencv-python-headless
